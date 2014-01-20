@@ -94,6 +94,8 @@ body {
       float: none;
       width: auto;
       background: none; }
+      #nav li li a:hover {
+        background: #ff995b; }
 
 #carousel {
   position: relative; }

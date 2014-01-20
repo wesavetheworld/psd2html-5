@@ -1,10 +1,13 @@
 $ ->
   $('#nav>li').each ->
     li = $(@)
+    timer = null
     li.on 'mouseenter', ->
+      clearTimeout timer if timer
       li.find('ul').show();
     li.on 'mouseleave', ->
-      li.find('ul').hide();
+      clearTimeout timer if timer
+      timer = setTimeout (-> li.find('ul').hide()), 20
 
   carousel = $('#carousel')
   carousel.find('li').each (idx) ->
