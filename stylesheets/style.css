@@ -75,10 +75,25 @@ body {
   #nav li {
     float: left;
     width: 12.5%;
+    position: relative;
     background: url(images/nav_split.png) no-repeat right center; }
     #nav li a {
       display: block;
       color: #FFFFFF; }
+    #nav li ul {
+      display: none;
+      list-style: none;
+      top: 29px;
+      left: 0;
+      z-index: 1000;
+      position: absolute;
+      width: 100%;
+      background: #508FE1;
+      border-radius: 0 0 5px 5px; }
+    #nav li li {
+      float: none;
+      width: auto;
+      background: none; }
 
 #carousel {
   position: relative; }
@@ -178,7 +193,7 @@ body {
       background: url(images/news_title_bg.png) no-repeat right center; }
     #news h3 a {
       right: 8px;
-      top: 8px;
+      top: 0;
       position: absolute; }
   #news ul {
     list-style-type: square;
@@ -202,7 +217,7 @@ body {
       background: url(images/notice_title_bg.png) no-repeat 7px center; }
     #notice h3 a {
       position: absolute;
-      top: 8px;
+      top: 0;
       right: 4px; }
   #notice ul {
     padding: 6px 6px 0;
