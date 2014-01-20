@@ -70,6 +70,7 @@ body {
   height: 30px;
   line-height: 28px;
   text-align: center;
+  list-style: none;
   background: url(images/nav_bg.png) repeat-x center; }
   #nav li {
     float: left;
