@@ -2,13 +2,22 @@
   $(function() {
     var carousel;
     $('#nav>li').each(function() {
-      var li;
+      var li, timer;
       li = $(this);
+      timer = null;
       li.on('mouseenter', function() {
+        if (timer) {
+          clearTimeout(timer);
+        }
         return li.find('ul').show();
       });
       return li.on('mouseleave', function() {
-        return li.find('ul').hide();
+        if (timer) {
+          clearTimeout(timer);
+        }
+        return timer = setTimeout((function() {
+          return li.find('ul').hide();
+        }), 20);
       });
     });
     carousel = $('#carousel');
