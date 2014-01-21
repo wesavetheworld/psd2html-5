@@ -114,6 +114,20 @@ body {
     a {
       display: block;
       color: #FFFFFF;
+      height: 100%;
+    }
+
+    &.active {
+
+      a {
+        color: red;
+        background: #e7ebed url('main_nav_bg.png') repeat-x top center;
+      }
+
+      li a {
+        color: black;
+        background: none;
+      }
     }
 
     ul {
@@ -124,7 +138,8 @@ body {
       z-index: 1000;
       position: absolute;
       width: 100%;
-      background: #508FE1;
+      background: #e7ebed;
+      border-top: none;
       border-radius: 0 0 5px 5px;
     }
 
@@ -132,27 +147,25 @@ body {
       float: none;
       width: auto;
       background: none;
-
-      a:hover {
-        background: #ff995b;
-      }
     }
   }
 }
 
-#carousel {
+.jcarousel {
   position: relative;
+  overflow: hidden;
 
-  a {
-    display: none;
+  div {
+    width: 20000em;
+    position: relative;
   }
 
-  .first {
-    display: block;
+  a {
+    float: left;
   }
 
   img {
-    width: 100%;
+    width: 1366px;
   }
 
   ul {
@@ -285,7 +298,7 @@ body {
 
     a {
       right: 8px;
-      top: 0;
+      top: 5px;
       position: absolute;
     }
   }
@@ -321,7 +334,7 @@ body {
 
     a {
       position: absolute;
-      top: 0;
+      top: 5px;
       right: 4px;
     }
   }

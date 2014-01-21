@@ -1,3 +1,25 @@
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,6 +27,7 @@
   <title>昆明市民办机构管理处</title>
   <link rel='stylesheet' href='stylesheets/style.css'>
   <script src='javascripts/jquery.js'></script>
+<script src='javascripts/jquery.jcarousel.js'></script>
 <script src='javascripts/index.js'></script>
 </head>
 <body>
@@ -37,10 +60,12 @@
       <li><a href="#">办事指南</a></li>
     </ul>
 
-    <div id="carousel">
-      <a class="first" href="#"><img src="images/img1.png"></a>
-      <a href="#"><img src="images/img2.png"></a>
-      <a href="#"><img src="images/img3.png"></a>
+    <div class="jcarousel">
+      <div>
+        <a href="#"><img src="images/img1.png"></a>
+        <a href="#"><img src="images/img2.png"></a>
+        <a href="#"><img src="images/img3.png"></a>
+      </div>
 
       <ul>
         <li class="active">1</li>
