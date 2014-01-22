@@ -2,7 +2,7 @@
 
 .jcarousel {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   overflow: hidden;
 
@@ -33,7 +33,7 @@
 
   li {
     font-size: 12px;
-    font-weight: border;
+    font-weight: bolder;
     color: #FFFFFF;
     display: inline;
     padding: 1px 5px;

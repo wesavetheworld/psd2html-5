@@ -2,7 +2,7 @@ $ ->
   carousel = $('.jcarousel')
   items = carousel.find('a')
 
-  carousel.jcarousel(wrap: 'both').jcarouselAutoscroll
+  carousel.jcarousel(wrap: 'circular').jcarouselAutoscroll
     interval: 3000
     target: '+=1'
     autostart: true

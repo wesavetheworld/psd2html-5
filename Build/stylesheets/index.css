@@ -74,6 +74,7 @@ body {
   #nav li {
     float: left;
     width: 12.5%;
+    z-index: 100;
     position: relative;
     background: url(images/nav_split.png) no-repeat right center; }
     #nav li a {
@@ -121,7 +122,7 @@ body {
 
 .jcarousel {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   overflow: hidden; }
   .jcarousel div {
@@ -143,7 +144,7 @@ body {
     background: url(images/links_bg.png) no-repeat right center; }
   .jcarousel li {
     font-size: 12px;
-    font-weight: border;
+    font-weight: bolder;
     color: #FFFFFF;
     display: inline;
     padding: 1px 5px;
