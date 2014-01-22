@@ -1,46 +1,73 @@
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>昆明市民办机构管理处</title>
-  <link rel='stylesheet' href='stylesheets/style.css'>
+  <link rel='stylesheet' href='stylesheets/index.css'>
   <script src='javascripts/jquery.js'></script>
-<script src='javascripts/index.js'></script>
+<script src='javascripts/jquery.jcarousel.js'></script>
+<script src='javascripts/nav.js'></script>
+<script src='javascripts/carousel.js'></script>
 </head>
 <body>
   <div id="wrap">
     <div id="header">
-      <h1>昆明市民办机构管理处</h1>
-      <div class="right">
-        <ul>
-          <li><a href="#">您好!欢迎登录!</a></li>
-          <li class="exit"><a href="#">退出</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <ul id="nav">
-      <li><a href="#">首页</a></li>
-      <li>
-        <a href="#">企业新闻</a>
-        <ul>
-          <li><a href="#">子菜单1</a></li>
-          <li><a href="#">子菜单2</a></li>
-          <li><a href="#">子菜单3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">信用专家</a></li>
-      <li><a href="#">科技信用库</a></li>
-      <li><a href="#">通知公告</a></li>
-      <li><a href="#">意见反馈</a></li>
-      <li><a href="#">关于我们</a></li>
-      <li><a href="#">办事指南</a></li>
+  <h1>昆明市民办机构管理处</h1>
+  <div class="right">
+    <ul>
+      <li><a href="#">您好!欢迎登录!</a></li>
+      <li class="exit"><a href="#">退出</a></li>
     </ul>
+  </div>
+</div>
 
-    <div id="carousel">
-      <a class="first" href="#"><img src="images/img1.png"></a>
-      <a href="#"><img src="images/img2.png"></a>
-      <a href="#"><img src="images/img3.png"></a>
+<ul id="nav">
+  <li><a href="#">首页</a></li>
+  <li>
+    <a href="#">企业新闻</a>
+    <ul>
+      <li><a href="#">子菜单1</a></li>
+      <li><a href="#">子菜单2</a></li>
+      <li><a href="#">子菜单3</a></li>
+    </ul>
+  </li>
+  <li><a href="#">信用专家</a></li>
+  <li><a href="#">科技信用库</a></li>
+  <li><a href="#">通知公告</a></li>
+  <li><a href="#">意见反馈</a></li>
+  <li><a href="#">关于我们</a></li>
+  <li><a href="#">办事指南</a></li>
+</ul>
+
+
+    <div class="jcarousel">
+      <div>
+        <a href="#"><img src="images/img1.png"></a>
+        <a href="#"><img src="images/img2.png"></a>
+        <a href="#"><img src="images/img3.png"></a>
+      </div>
 
       <ul>
         <li class="active">1</li>
@@ -168,28 +195,29 @@
     </div>
 
     <div id="footer">
-      <ul id="subnav">
-        <li><a href="#">首页<a></li>
-        <li>|</li>
-        <li><a href="#">企业新闻</a></li>
-        <li>|</li>
-        <li><a href="#">信用专家</a></li>
-        <li>|</li>
-        <li><a href="#">科技信用库</a></li>
-        <li>|</li>
-        <li><a href="#">通知公告</a></li>
-        <li>|</li>
-        <li><a href="#">意见反馈</a></li>
-        <li>|</li>
-        <li><a href="#">关于我们</a></li>
-        <li>|</li>
-        <li><a href="#">办事指南</a></li>
-      </ul>
-      <p class="clear">主办单位：昆明市民办科技机构管理处 技术支持：中国信用财富网 </p>
-      <p>地址：云南省昆明市青年路371号文化科技大楼三楼</p>
-      <p>电话：0871-3195658 传真：0871-3102670</p>
-      <p>Copyright(C)2010 滇ICP备201011901号</p>
-    </div>
+  <ul id="subnav">
+    <li><a href="#">首页<a></li>
+    <li>|</li>
+    <li><a href="#">企业新闻</a></li>
+    <li>|</li>
+    <li><a href="#">信用专家</a></li>
+    <li>|</li>
+    <li><a href="#">科技信用库</a></li>
+    <li>|</li>
+    <li><a href="#">通知公告</a></li>
+    <li>|</li>
+    <li><a href="#">意见反馈</a></li>
+    <li>|</li>
+    <li><a href="#">关于我们</a></li>
+    <li>|</li>
+    <li><a href="#">办事指南</a></li>
+  </ul>
+  <p class="clear">主办单位：昆明市民办科技机构管理处 技术支持：中国信用财富网 </p>
+  <p>地址：云南省昆明市青年路371号文化科技大楼三楼</p>
+  <p>电话：0871-3195658 传真：0871-3102670</p>
+  <p>Copyright(C)2010 滇ICP备201011901号</p>
+</div>
+
   </div>
 </body>
 </html>

@@ -29,7 +29,6 @@ body {
   margin: auto;
   min-width: 1024px;
   max-width: 1366px;
-  min-height: 738px;
   text-align: left; }
 
 #header {
@@ -79,7 +78,16 @@ body {
     background: url(images/nav_split.png) no-repeat right center; }
     #nav li a {
       display: block;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      height: 100%; }
+      #nav li a:hover {
+        color: #feb45f; }
+    #nav li.active a {
+      color: red;
+      background: #e7ebed url(images/main_nav_bg.png) repeat-x top center; }
+    #nav li.active li a {
+      color: black;
+      background: none; }
     #nav li ul {
       display: none;
       list-style: none;
@@ -88,24 +96,40 @@ body {
       z-index: 1000;
       position: absolute;
       width: 100%;
-      background: #508FE1;
+      background: #e7ebed;
+      border-top: none;
       border-radius: 0 0 5px 5px; }
     #nav li li {
       float: none;
       width: auto;
       background: none; }
-      #nav li li a:hover {
-        background: #ff995b; }
 
-#carousel {
-  position: relative; }
-  #carousel a {
-    display: none; }
-  #carousel .first {
-    display: block; }
-  #carousel img {
-    width: 100%; }
-  #carousel ul {
+#footer {
+  clear: both;
+  text-align: center;
+  padding-top: 18px;
+  margin-top: 8px;
+  background: white url(images/footer_bg.png) repeat-x center top; }
+  #footer ul {
+    margin-bottom: 30px; }
+  #footer li {
+    display: inline;
+    padding: 10px; }
+  #footer p {
+    font-size: 12px;
+    line-height: 1.5; }
+
+.jcarousel {
+  position: relative;
+  overflow: hidden; }
+  .jcarousel div {
+    width: 20000em;
+    position: relative; }
+  .jcarousel a {
+    float: left; }
+  .jcarousel img {
+    width: 1366px; }
+  .jcarousel ul {
     bottom: 0;
     right: 0;
     width: 100%;
@@ -115,7 +139,7 @@ body {
     height: 16px;
     line-height: 16px;
     background: url(images/links_bg.png) no-repeat right center; }
-  #carousel li {
+  .jcarousel li {
     font-size: 12px;
     font-weight: border;
     color: #FFFFFF;
@@ -124,7 +148,7 @@ body {
     margin: 0 2px;
     background: #B8B8B8;
     cursor: pointer; }
-    #carousel li.active {
+    .jcarousel li.active {
       color: red; }
 
 .row {
@@ -195,7 +219,7 @@ body {
       background: url(images/news_title_bg.png) no-repeat right center; }
     #news h3 a {
       right: 8px;
-      top: 0;
+      top: 5px;
       position: absolute; }
   #news ul {
     list-style-type: square;
@@ -219,7 +243,7 @@ body {
       background: url(images/notice_title_bg.png) no-repeat 7px center; }
     #notice h3 a {
       position: absolute;
-      top: 0;
+      top: 5px;
       right: 4px; }
   #notice ul {
     padding: 6px 6px 0;
@@ -307,17 +331,3 @@ body {
 
 .qtwy {
   background-image: url(images/qtwy.png); }
-
-#footer {
-  text-align: center;
-  padding-top: 18px;
-  margin-top: 8px;
-  background: url(images/footer_bg.png) repeat-x center top; }
-  #footer ul {
-    margin-bottom: 30px; }
-  #footer li {
-    display: inline;
-    padding: 10px; }
-  #footer p {
-    font-size: 12px;
-    line-height: 1.5; }
