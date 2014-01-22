@@ -10,18 +10,18 @@
       target: '+=1',
       autostart: true
     });
-    carousel.on('jcarousel:scrollend', function(event, widget) {
+    $('.jcarousel-pagination').on('jcarouselpagination:createend', function() {
+      return $('.jcarousel-pagination li').eq(0).addClass('active');
+    }).jcarouselPagination({
+      item: function(page) {
+        return "<li>" + page + "</li>";
+      }
+    });
+    return carousel.on('jcarousel:scrollend', function(event, widget) {
       var idx;
       idx = items.index(widget.target());
       carousel.find('li.active').removeClass('active');
       return carousel.find('li').eq(idx).addClass('active');
-    });
-    return $('.jcarousel li').each(function(idx) {
-      var li;
-      li = $(this);
-      return li.click(function() {
-        return carousel.jcarousel('scroll', idx);
-      });
     });
   });
 
