@@ -21,7 +21,6 @@
 
   li {
     padding-left: 30px;
-    line-height: 30px;
 
     &.active, &.selected {
       background: #2A7CBF url('nav_dot.png') no-repeat 20px center;
@@ -33,6 +32,8 @@
     }
 
     a {
+      line-height: 30px;
+      height: 30px;
       display: block;
     }
   }

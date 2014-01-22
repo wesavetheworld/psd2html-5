@@ -91,7 +91,7 @@ body {
     #nav li ul {
       display: none;
       list-style: none;
-      top: 29px;
+      top: 28px;
       left: 0;
       z-index: 1000;
       position: absolute;
@@ -121,6 +121,8 @@ body {
 
 .jcarousel {
   position: relative;
+  z-index: -1;
+  width: 100%;
   overflow: hidden; }
   .jcarousel div {
     width: 20000em;
