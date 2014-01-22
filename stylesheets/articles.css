@@ -74,6 +74,7 @@ body {
   #nav li {
     float: left;
     width: 12.5%;
+    z-index: 100;
     position: relative;
     background: url(images/nav_split.png) no-repeat right center; }
     #nav li a {
