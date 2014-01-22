@@ -91,7 +91,7 @@ body {
     #nav li ul {
       display: none;
       list-style: none;
-      top: 29px;
+      top: 28px;
       left: 0;
       z-index: 1000;
       position: absolute;
@@ -135,14 +135,15 @@ body {
   #sidebar ul {
     list-style: none; }
   #sidebar li {
-    padding-left: 30px;
-    line-height: 30px; }
+    padding-left: 30px; }
     #sidebar li.active, #sidebar li.selected {
       background: #2a7cbf url(images/nav_dot.png) no-repeat 20px center; }
       #sidebar li.active a, #sidebar li.selected a {
         color: #FFFFFF;
         background: url(images/nav_tip.png) no-repeat right center; }
     #sidebar li a {
+      line-height: 30px;
+      height: 30px;
       display: block; }
 
 #content {
