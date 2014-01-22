@@ -7,12 +7,11 @@ $ ->
     target: '+=1'
     autostart: true
 
+  $('.jcarousel-pagination').on 'jcarouselpagination:createend', ->
+    $('.jcarousel-pagination li').eq(0).addClass 'active'
+  .jcarouselPagination(item: (page) -> "<li>#{page}</li>")
+
   carousel.on 'jcarousel:scrollend', (event, widget) ->
     idx = items.index widget.target()
     carousel.find('li.active').removeClass 'active'
     carousel.find('li').eq(idx).addClass 'active'
-
-  $('.jcarousel li').each (idx) ->
-    li = $ @
-    li.click ->
-      carousel.jcarousel('scroll', idx);
