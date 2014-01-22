@@ -1,12 +1,43 @@
+#nav {
+  margin-bottom: 15px;
+}
+
 #sidebar {
   width: 250px;
-  outline: 1px red solid;
+  float: left;
 
   h2 {
-    border-left: 5px #4893D6 solid;
+    line-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    color: #2A7CC0;
+    font-size: 18px;
+    border-left: 5px solid;
   }
 
   ul {
     list-style: none;
   }
+
+  li {
+    padding-left: 30px;
+    line-height: 30px;
+
+    &.active, &.selected {
+      background: #2A7CBF url('nav_dot.png') no-repeat 20px center;
+
+      a {
+        color: #FFFFFF;
+        background: url('nav_tip.png') no-repeat right center;
+      }
+    }
+
+    a {
+      display: block;
+    }
+  }
+}
+
+#content {
+  margin-left: 250px;
 }

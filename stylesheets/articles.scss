@@ -1,1 +1,99 @@
 @import "base", "layout";
+
+#content {
+  h3 {
+    line-height: 30px;
+    background: url('grid_title_bg.png') repeat-x center;
+
+    span {
+      display: block;
+      padding-left: 30px;
+      background:url('grid_title.png') no-repeat 10px center;
+    }
+  }
+
+  .inner {
+    margin: 0 10px;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 10px;
+    line-height: 30px;
+    border-collapse: collapse;
+    border: 1px #bde5f1 solid;
+  }
+
+  tr.alt {
+    background: #f1f6fc;
+  }
+
+  th {
+    text-align: center;
+    background: url('th_bg.png') repeat-x center;
+  }
+
+  td {
+    padding: 0 10px;
+    border: 1px #bde5f1 solid;
+  }
+
+  @mixin padding {
+    padding: 5px;
+    background: no-repeat center;
+  }
+
+  tfoot {
+    background: #f1f6fc;
+    text-align: right;
+
+    a {
+      margin: 5px;
+    }
+
+    .left {
+      @include padding;
+      background-image: url('page_left.png');
+    }
+
+    .pre {
+      @include padding;
+      background-image: url('pre.png');
+    }
+    .next {
+      @include padding;
+      background-image: url('next.png');
+    }
+    .right {
+      @include padding;
+      background-image: url('page_right.png');
+    }
+  }
+
+  .btns {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px #bde5f1 solid;
+    margin-bottom: 10px;
+    border-top: none;
+    background: url('grid_btns.png') repeat-x bottom;
+
+    button {
+      width: 76px;
+      height: 23px;
+      border: none;
+      margin: 8px;
+      cursor: pointer;
+      background: no-repeat center;
+    }
+
+    .submit {
+      background-image: url('btn_submit.png');
+    }
+
+    .close {
+      background-image: url('btn_close.png');
+    }
+  }
+}

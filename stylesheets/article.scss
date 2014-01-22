@@ -1,0 +1,47 @@
+@import "base", "layout";
+
+#content {
+  position: relative;
+
+  h3 {
+    line-height: 30px;
+    font-size: 20px;
+    color: #7B130E;
+    border-bottom: 2px solid #CECECE;
+  }
+
+  .crumbs {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+    &, * {
+      color: #AAA6A5;
+    }
+  }
+
+  .article {
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 18px;
+    color: #7B130E;
+    margin: 15px 0 5px;
+  }
+
+  .meta {
+    border-bottom: 1px dashed #CECECE;
+    padding-bottom: 10px;
+  }
+
+  .section {
+    text-align: left;
+    margin: 15px;
+
+    p {
+      line-height: 1.5;
+      text-indent: 2em;
+    }
+  }
+}

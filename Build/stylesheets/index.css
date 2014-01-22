@@ -29,7 +29,6 @@ body {
   margin: auto;
   min-width: 1024px;
   max-width: 1366px;
-  min-height: 738px;
   text-align: left; }
 
 #header {
@@ -106,10 +105,11 @@ body {
       background: none; }
 
 #footer {
+  clear: both;
   text-align: center;
   padding-top: 18px;
   margin-top: 8px;
-  background: url(images/footer_bg.png) repeat-x center top; }
+  background: white url(images/footer_bg.png) repeat-x center top; }
   #footer ul {
     margin-bottom: 30px; }
   #footer li {

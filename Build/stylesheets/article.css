@@ -148,66 +148,31 @@ body {
 #content {
   margin-left: 250px; }
 
-#content h3 {
-  line-height: 30px;
-  background: url(images/grid_title_bg.png) repeat-x center; }
-  #content h3 span {
-    display: block;
-    padding-left: 30px;
-    background: url(images/grid_title.png) no-repeat 10px center; }
-#content .inner {
-  margin: 0 10px; }
-#content table {
-  width: 100%;
-  margin-top: 10px;
-  line-height: 30px;
-  border-collapse: collapse;
-  border: 1px #bde5f1 solid; }
-#content tr.alt {
-  background: #f1f6fc; }
-#content th {
-  text-align: center;
-  background: url(images/th_bg.png) repeat-x center; }
-#content td {
-  padding: 0 10px;
-  border: 1px #bde5f1 solid; }
-#content tfoot {
-  background: #f1f6fc;
-  text-align: right; }
-  #content tfoot a {
-    margin: 5px; }
-  #content tfoot .left {
-    padding: 5px;
-    background: no-repeat center;
-    background-image: url(images/page_left.png); }
-  #content tfoot .pre {
-    padding: 5px;
-    background: no-repeat center;
-    background-image: url(images/pre.png); }
-  #content tfoot .next {
-    padding: 5px;
-    background: no-repeat center;
-    background-image: url(images/next.png); }
-  #content tfoot .right {
-    padding: 5px;
-    background: no-repeat center;
-    background-image: url(images/page_right.png); }
-#content .btns {
-  height: 38px;
-  line-height: 38px;
-  text-align: center;
-  border: 1px #bde5f1 solid;
-  margin-bottom: 10px;
-  border-top: none;
-  background: url(images/grid_btns.png) repeat-x bottom; }
-  #content .btns button {
-    width: 76px;
-    height: 23px;
-    border: none;
-    margin: 8px;
-    cursor: pointer;
-    background: no-repeat center; }
-  #content .btns .submit {
-    background-image: url(images/btn_submit.png); }
-  #content .btns .close {
-    background-image: url(images/btn_close.png); }
+#content {
+  position: relative; }
+  #content h3 {
+    line-height: 30px;
+    font-size: 20px;
+    color: #7B130E;
+    border-bottom: 2px solid #CECECE; }
+  #content .crumbs {
+    position: absolute;
+    right: 5px;
+    top: 5px; }
+    #content .crumbs, #content .crumbs * {
+      color: #AAA6A5; }
+  #content .article {
+    text-align: center; }
+  #content h4 {
+    font-size: 18px;
+    color: #7B130E;
+    margin: 15px 0 5px; }
+  #content .meta {
+    border-bottom: 1px dashed #CECECE;
+    padding-bottom: 10px; }
+  #content .section {
+    text-align: left;
+    margin: 15px; }
+    #content .section p {
+      line-height: 1.5;
+      text-indent: 2em; }
